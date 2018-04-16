@@ -1,0 +1,67 @@
+/**
+ * Battleships plugin for Craft CMS
+ *
+ * BattleshipsField Field CSS
+ *
+ * @author    @cole007
+ * @copyright Copyright (c) 2018 @cole007
+ * @link      http://ournameismud.co.uk/
+ * @package   Battleships
+ * @since     0.0.1
+ */
+
+.bs-selecta {
+	margin-bottom: 10px;
+}
+.bs-modal {
+	max-width: 70%;
+}
+.bs-modal img {
+	max-width: 100%;
+	height: auto;
+}
+.bs-modal .img-wrapper {
+	position: relative;
+}
+#fields-blob, .blobs {
+	width: 12px;
+	height: 12px;
+	border: 2px solid white;
+	border-radius: 8px;
+	background: Hotpink;
+	position: absolute;
+	margin-top: -8px;
+	margin-left: -8px;
+	z-index: 100;
+	top: 0;
+	left: 0;
+}
+#fields-blob {
+	display: none;
+}
+.blobs {
+	opacity: 0.5;
+}
+
+
+td.picker input + label {
+	position: relative;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+td.picker input:checked:not(:indeterminate) + label:before,
+td.picker input + label:before {
+	display: none;
+}
+td.picker input + label:after {
+	content: '';
+	display: block;
+	left: 0;
+	top: 0;
+	height: 24px;
+	width: 24px;
+	background: url(../img/BattleshipsField-icon.svg);
+	background-size: contain;
+	position: absolute;
+}

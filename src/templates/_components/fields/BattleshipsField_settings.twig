@@ -1,0 +1,27 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Battleships plugin for Craft CMS
+ *
+ * BattleshipsField Field Settings
+ *
+ * @author    @cole007
+ * @copyright Copyright (c) 2018 @cole007
+ * @link      http://ournameismud.co.uk/
+ * @package   Battleships
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{# {% do view.registerAssetBundle("ournameismud\\battleships\\assetbundles\\battleships\\BattleshipsAsset") %} #}
+
+{{ forms.checkboxSelectField({
+    label: 'Asset source',
+    id: 'assetSource',
+    name: 'assetSource',
+    options: sourceOptions,
+    showAllOption: true,
+    values: field['assetSource']})
+}}

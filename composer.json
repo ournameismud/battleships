@@ -1,0 +1,43 @@
+{
+    "name": "ournameismud/battleships",
+    "description": "Custom Field Type to pick x-y coordinates from an image",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "battleships"
+    ],
+    "support": {
+        "docs": "https://github.com/ournameismud/battleships/blob/master/README.md",
+        "issues": "https://github.com/ournameismud/battleships/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "@cole007",
+            "homepage": "http://ournameismud.co.uk/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "ournameismud\\battleships\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Battleships",
+        "handle": "battleships",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/ournameismud/battleships/master/CHANGELOG.md",
+        "components": {
+            "battleshipsService": "ournameismud\\battleships\\services\\BattleshipsService"
+        },
+        "class": "ournameismud\\battleships\\Battleships"
+    }
+}

@@ -1,0 +1,83 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Battleships plugin for Craft CMS 3.x
+ *
+ * BattleshipsField Field Input
+ *
+ * @author    @cole007
+ * @copyright Copyright (c) 2018 @cole007
+ * @link      http://ournameismud.co.uk/
+ * @package   Battleships
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+{% do view.registerAssetBundle("ournameismud\\battleships\\assetbundles\\battleshipsfieldfield\\BattleshipsFieldFieldAsset") %}
+
+
+{% if value %}
+{% set assets = craft.assets({ id: value.asset }) %}
+{% endif %}
+<div class="bs-selecta">
+
+
+{{ forms.elementSelectField({
+    elementType: 'craft\\elements\\Asset',
+    sources: field.assetSource,
+    label: 'Choose your image',
+    kind: ["image"],
+    id: name ~ '_asset',
+    limit: 1,
+    name: name ~ '[asset]',
+    elements: assets is defined ? assets : null })
+}}
+</div>
+
+<div id="ex1" class="bs-modal">
+	<div class="img-wrapper">
+		{% if assets is defined %}
+		 	{% set asset = assets|first %}
+			<img src="/{{ asset.getUrl }}" width="{{ asset.width }}" height="{{ asset.height }}" alt=""/>
+		{% else %}
+			<img src="/" width="" height="" alt=""/>
+		{% endif %}
+	  	<p></p>
+	  	<button type="button" class="btn submit big" rel="close-modal">Confirm selection</button>
+	  	<div id="blob"></div>
+
+	  	{# <a href="#" rel="modal:close">Close</a> #}
+  	</div>
+</div>
+
+
+
+<div class="battleship-wrapper{{ assets is not defined or assets|length == 0 ? ' hidden' }}">
+{{ forms.editableTableField({
+	name: name  ~ '[xy]',
+	id: name ~ '_xy',
+	rows: value|length and value.xy is defined ? value.xy : null,
+	cols: [{
+		heading: 'Title',
+		type: 'text',
+		class: 'title'
+	},{
+		heading: 'X',
+		type: 'text',
+		width: '75',
+		class: 'coord'
+	},{
+		heading: 'Y',
+		type: 'text',
+		width: '75',
+		class: 'coord'
+	},{
+		heading: 'Picker',
+		type: 'checkbox',
+		width: '20',
+		class: 'picker',
+	}],
+
+}) }}
+</div>
