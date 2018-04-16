@@ -2,7 +2,7 @@
 
 Custom Field Type to pick x-y coordinates from an image
 
-![Screenshot](resources/img/plugin-logo.png)
+![Screenshot](resources/img/screenshot.png)
 
 ## Requirements
 
