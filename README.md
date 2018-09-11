@@ -2,11 +2,11 @@
 
 Custom Field Type to pick x-y coordinates from an image
 
-![Screenshot](resources/img/screenshot.png)
+![Screenshot](resources/img/plugin-logo.png)
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0 or later.
+This plugin requires Craft CMS 3.0.0-beta.23 or later.
 
 ## Installation
 
@@ -24,41 +24,19 @@ To install the plugin, follow these instructions.
 
 ## Battleships Overview
 
-This plugin lets you build out a map of points on an image.
+-Insert text here-
 
 ## Configuring Battleships
 
-The only configuration for this plugin is when creating a field you can specify which assets you can select an image from.
+-Insert text here-
 
 ## Using Battleships
 
-1. Choose an image for use with your points data via the `+ Choose` button. 
-2. Once you have chosen an image you can add rows for each point. Clicking on the crosshair will bring up a modal where you can select a point on the image. Once confirmed the x and y values of this point will be logged in the table. 
-3. You can additionally provide a label/title for the point you have logged.
-4. You can remove rows and sort them using the drag and remove icons in the table.
+-Insert text here-
 
-## Battleships Variables
+## Battleships Roadmap
 
-The data from the field will be stored as a JSON string. You can access this directly in your field or pass it through the Battleships `getPos()` template variable, for example:
-
-`{% set points = craft.battleships.getPos( entry.points-map ) %}`
-
-Would return the following:
-
-- `{{ points.asset }}`: an asset Element object
-- `{{ points.rows }}`: an array of rows with three values available for each row: label, x and y.
-
-So we can access these, for example, with the following code:
-
-```
-    <dl>
-    {% for row in points.rows %}
-    	<dt>{{ row.label }}<dt>
-    	<dd>X: {{ row.x }}<dd>
-    	<dd>Y: {{ row.y }}<dd>
-    {% endfor %}
-    </dl>
-```
+Some things to do, and ideas for potential features:
 
 * Release it
 

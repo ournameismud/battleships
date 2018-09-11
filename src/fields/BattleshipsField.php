@@ -77,10 +77,6 @@ class BattleshipsField extends Field
      */
     public function normalizeValue($value, ElementInterface $element = null)
     {
-        // Craft::dd( gettype($value) );
-        if (is_string($value)) {
-            $value = json_decode($value, true);
-        }
         return $value;
     }
 
