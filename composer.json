@@ -2,7 +2,7 @@
     "name": "ournameismud/battleships",
     "description": "Custom Field Type to pick x-y coordinates from an image",
     "type": "craft-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": [
         "craft",
         "cms",

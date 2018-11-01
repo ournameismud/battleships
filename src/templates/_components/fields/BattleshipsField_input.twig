@@ -37,7 +37,7 @@
 
 <div id="ex1" class="bs-modal">
 	<div class="img-wrapper">
-		{% if assets is defined %}
+		{% if assets|length %}
 		 	{% set asset = assets|first %}
 			<img src="/{{ asset.getUrl }}" width="{{ asset.width }}" height="{{ asset.height }}" alt=""/>
 		{% else %}
